@@ -26,6 +26,9 @@ struct DiskUsage {
     uint64_t available;
     uint64_t free;
     uint64_t total;
+    uint64_t inodes_available;
+    uint64_t inodes_free;
+    uint64_t inodes_total;
 };
 
 DiskUsage GetDiskUsage(const char* path);

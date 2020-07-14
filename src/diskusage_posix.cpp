@@ -18,6 +18,8 @@ DiskUsage GetDiskUsage(const char* path)
     result.available = info.f_bavail * info.f_frsize;
     result.free = info.f_bfree * info.f_frsize;
     result.total = info.f_blocks * info.f_frsize;
-
+    result.inodes_available = info.f_favail;
+    result.inodes_free = info.f_ffree;
+    result.inodes_total = info.f_files;
     return result;
 }

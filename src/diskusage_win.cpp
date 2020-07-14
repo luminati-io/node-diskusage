@@ -59,6 +59,8 @@ DiskUsage GetDiskUsage(const char* path)
     result.available = available.QuadPart;
     result.free = free.QuadPart;
     result.total = total.QuadPart;
-
+    result.inodes_available = 0;
+    result.inodes_free = 0;
+    result.inodes_total = 0;
     return result;
 }
